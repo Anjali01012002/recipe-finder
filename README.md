@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# Recipe Finder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Recipe Finder is a React-based web application designed to help users search for, view, and save recipes from the Spoonacular API. It provides a user-friendly interface for discovering recipes, viewing detailed information, and managing favorite recipes.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Search Recipes**: Search for recipes by name or ingredient.
+- **View Details**: See detailed information about each recipe, including ingredients and cooking instructions.
+- **Save Recipes**: Save your favorite recipes to view later.
+- **Infinite Scrolling**: Automatically load more recipes as you scroll down the page.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React
+- Bootstrap
+- Spoonacular API
+- React Infinite Scroll Component
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation Instructions
 
-### `npm test`
+To get started with Recipe Finder, follow these steps:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Clone the Repository**
 
-### `npm run build`
+   git clone https://github.com/Anjali01012002/recipe-finder.git
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2.  **Navigate to the Project Directory**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    cd recipe-finder
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Install Dependencies**
 
-### `npm run eject`
+    npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. **Create an .env File**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+In the root directory of the project, create a file named .env and add your API key:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    REACT_APP_API_KEY=your_api_key_here
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Make sure to replace your_api_key_here with your actual API key from Spoonacular.
 
-## Learn More
+5. **Start the Development Server**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    npm start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Output Screenshots
 
-### Code Splitting
+![Recipe Finder](public/assets/1_recipe.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![Search Recipe](public/assets/search_recipe.png)
 
-### Analyzing the Bundle Size
+![Recipe Details](public/assets/recipe_details.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![Saved Recipe](public/assets/saved_recipe.png)
 
-### Making a Progressive Web App
+## Architecture
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The Recipe Finder application follows a simple architecture:
 
-### Advanced Configuration
+- **`public/`**: Contains static files such as `index.html`, images, and the favicon.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+  - **`assets/`**: Directory for static assets like images.
 
-### Deployment
+- **`src/`**: Contains the application's source code.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+  - **`components/`**: Contains React components that are used throughout the app.
+    
+    - **`RecipeCard.js`**: Component to display individual recipe details.
+    - **`RecipeDetails.js`**: Component to display detailed information about a selected recipe.
+    - **`RecipeList.js`**: Component to display a list of recipes.
+    -**`SavedRecipe.js`**: Component to manage and display saved recipes.
+    - **`SearchBar.js`**: Component for the search functionality.
 
-### `npm run build` fails to minify
+  - **`App.js`**: Main component that integrates other components and contains the app's overall layout.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  - **`index.js`**: Entry point that renders the `App` component into the DOM.
+
+  - **`styles.css`**: (Optional) Contains styles for the application.
+
+- **`.gitignore`**: Specifies files and directories to be ignored by Git.
+
+- **`.env`**: Contains environment variables like API keys.
+
+- **`README.md`**: Documentation file with project details, setup instructions, and usage information.
+
+- **`package.json`**: Lists project dependencies and metadata.
+
+- **`package-lock.json`**: Ensures consistent dependency installs.
+
+This architecture allows for modular development and easy maintenance of the application.
+
+## Acknowledgements
+
+- [Spoonacular API](https://spoonacular.com/food-api) for recipe data.
+- [React](https://reactjs.org/) for the front-end framework.
+- [Bootstrap](https://getbootstrap.com/) for styling.
